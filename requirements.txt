@@ -1,0 +1,9 @@
+sty
+colorcet
+numpy
+matplotlib
+qiskit
+qiskit-aer
+
+pytest
+ipykernel

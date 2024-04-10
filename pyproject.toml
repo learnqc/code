@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hume"
+description = "A quantum state simulator for those that have problems with induction"
+dynamic = ["version"]
+requires-python = ">=3.7"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hume*"]
+namespaces = false
+
