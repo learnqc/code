@@ -1,0 +1,18 @@
+version: '3'
+services:
+  jupyter:
+    build: 
+      context: .
+      dockerfile: ./docker/jupyter/Dockerfile
+    volumes:
+      - ./src:/home/jupyternb
+    environment:
+      - JUPYTER_TOKEN=token
+      - NB_USER=jupyternb
+      - NB_UID=1000
+      - NB_GID=100
+      - CHOWN_HOME=yes
+    ports:
+      - 8888:8888
+    working_dir: /home/jupyternb
+    container_name: programming_quantum_software
