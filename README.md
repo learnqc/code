@@ -26,11 +26,11 @@ In addition to the book, there are two more resources available for users:
 
 ## Table of Contents
 
-| Chapter       | Code          |
-| ------------- | ------------- |
-| 1. The Advantages and Challenges of Programming Quantum Computers     | --  |
-| 2. A first look at quantum computations: the knapsack problem         | [ch02](https://github.com/logicalguess/book_code/tree/main/src/ch02) / [notebook](https://github.com/logicalguess/book_code/blob/main/src/ch02/ch02.ipynb) |
-| 3. Single-qubit state and gates                                       | [ch03](https://github.com/logicalguess/book_code/tree/main/src/ch03) / [notebook](https://github.com/logicalguess/book_code/blob/main/src/ch03/ch03.ipynb) / [exercises](https://github.com/logicalguess/book_code/blob/main/src/ch03/ch03_exercises.ipynb) |
+| Chapter       | Code                                                                                                                                                                                                                                                        |
+| ------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. The Advantages and Challenges of Programming Quantum Computers     | --                                                                                                                                                                                                                                                          |
+| 2. A first look at quantum computations: the knapsack problem         | [ch02](https://github.com/learnqc/code/tree/main/src/ch02) / [notebook](https://github.com/learnqc/code/blob/main/src/ch02/ch02.ipynb)                                                                                                            |
+| 3. Single-qubit state and gates                                       | [ch03](https://github.com/learnqc/code/tree/main/src/ch03) / [notebook](https://github.com/learnqc/code/blob/main/src/ch03/ch03.ipynb) / [exercises](https://github.com/learnqc/code/blob/main/src/ch03/ch03_exercises.ipynb) |
 
 
 ## Getting Started
