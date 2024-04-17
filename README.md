@@ -45,6 +45,7 @@ Below you'll find the structure of the repository and instructions for how to ge
 │   │   ├── chXX_exercises.ipynb   # notebook with chapter exercises and solutions
 │   │   └── x.py                   # the source code introduced in each chapter
 │   ├── hume                       # the complete quantum simulator implemented over the course of the book
+│   ├── ibmq                       # real quantum hardware experiments using IBMQ Quantum Platform Open Plan
 │   ├── ...
 </pre>
 
