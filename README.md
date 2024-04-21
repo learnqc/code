@@ -1,5 +1,11 @@
 # Building Quantum Software: A Developer's Guide
-Building Quantum Software: A Developer's Guide will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
+
+
+
+[<img src="/assets/images/Gonciulea-MEAP-HI.png">](https://www.manning.com/books/building-quantum-software)
+
+
+[Building Quantum Software: A Developer's Guide](https://www.manning.com/books/building-quantum-software) will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
 
 This repository ([https://github.com/learnqc/code](https://github.com/learnqc/code)) is the official companion to Building Quantum Software: A Developer's Guide. It includes the code for creating and running a quantum simulator, as well as a natural language assistant to help run quantum computations, exercises to accompany the book content, and a complete, standalone quantum simulator.
 
