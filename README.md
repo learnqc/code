@@ -25,6 +25,9 @@ In addition to the book, there are two more resources available for users:
 
 * A series of mini applications based on specific topics in the book. These applications feature a simple UI that allows you to experiment with different concepts.
 * An AI assistant that responds to written and spoken commands to run and visualize quantum computations.  
+
+
+These are available in a separate repository: https://github.com/learnqc/code.
     
 <!-- 
 [TODO: mental model image]
