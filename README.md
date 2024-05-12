@@ -7,7 +7,7 @@
 
 [Building Quantum Software: A Developer's Guide](https://www.manning.com/books/building-quantum-software) will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
 
-This repository ([https://github.com/learnqc/code](https://github.com/learnqc/code)) is the official companion to Building Quantum Software: A Developer's Guide. It includes the code for creating and running a quantum simulator, as well as a natural language assistant to help run quantum computations, exercises to accompany the book content, and a complete, standalone quantum simulator.
+This repository is the official companion to Building Quantum Software: A Developer's Guide. It includes the code for creating and running a quantum simulator, as well as a natural language assistant to help run quantum computations, exercises to accompany the book content, and a complete, standalone quantum simulator.
 
 The code uses minimal dependencies to facilitate learning and ensure the longevity of its functionality. The notebooks for each chapter build incrementally on previous chapters, and only use code dependencies within each chapter module. 
 
@@ -27,7 +27,7 @@ In addition to the book, there are two more resources available for users:
 * An AI assistant that responds to written and spoken commands to run and visualize quantum computations.  
 
 
-These are available in a separate repository: https://github.com/learnqc/code.
+These are available in a separate repository: https://github.com/learnqc/code_plus.
     
 <!-- 
 [TODO: mental model image]
