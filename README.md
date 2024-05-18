@@ -2,10 +2,10 @@
 
 
 
-[<img src="/assets/images/Gonciulea-MEAP-HI.png">](https://mng.bz/Ad87)
+[<img src="/assets/images/Gonciulea-MEAP-HI.png">](https://mng.bz/1GJn)
 
 
-[Building Quantum Software: A Developer's Guide](https://mng.bz/Ad87) will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
+[Building Quantum Software: A Developer's Guide](https://mng.bz/1GJn) will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
 
 This repository is the official companion to Building Quantum Software: A Developer's Guide. It includes the code for creating and running a quantum simulator, as well as a natural language assistant to help run quantum computations, exercises to accompany the book content, and a complete, standalone quantum simulator.
 
