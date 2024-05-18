@@ -2,7 +2,7 @@
 
 
 
-[<img src="/assets/images/Gonciulea-MEAP-HI.png">](https://www.manning.com/books/building-quantum-software)
+[<img src="/assets/images/Gonciulea-MEAP-HI.png">](https://mng.bz/Ad87)
 
 
 [Building Quantum Software: A Developer's Guide](https://www.manning.com/books/building-quantum-software) will teach you the foundations of quantum computing, how to implement quantum computations, and when to take advantage of the benefits of quantum computing.
