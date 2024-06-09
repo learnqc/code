@@ -8,10 +8,10 @@ description = "A quantum state simulator for those that have problems with induc
 dynamic = ["version"]
 requires-python = ">=3.7"
 dependencies = [
+  "sty",
   "colorcet",
   "matplotlib",
   "qiskit"
-  "sty"
 ]
 
 [tool.setuptools.packages.find]
