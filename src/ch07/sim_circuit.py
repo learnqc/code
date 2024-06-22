@@ -69,6 +69,12 @@ class QuantumCircuit(QuantumCircuit6):
                     m(-tr.arg, cs[0], qs[reg][t])
                 else:
                     m(cs[0], qs[reg][t])
+            # multi-control
+            else:
+                if tr.arg is not None:
+                    m(-tr.arg, cs, qs[reg][t])
+                else:
+                    m(cs, qs[reg][t])
 
         return qc
 
