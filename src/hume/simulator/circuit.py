@@ -144,28 +144,38 @@ class QuantumCircuit:
 
     def run(self):
         for tr in self.transformations:
-            if tr.name == 'unitary':
-                cs = tr.controls
-                if len(cs) == 0:
-                    transform_u(self.state, tr.gate, tr.target)
-                elif len(cs) == 1:
-                    c_transform_u(self.state, tr.gate, cs[0], tr.target)
-
-            elif isinstance(tr, Swap):
-                c_transform(self.state, tr.i, tr.j, x)
-                c_transform(self.state, tr.j, tr.i, x)
-                c_transform(self.state, tr.i, tr.j, x)
-
-            else:
-                cs = tr.controls
-                if len(cs) == 0:
-                    transform(self.state, tr.target, tr.gate)
-                elif len(cs) == 1:
-                    c_transform(self.state, cs[0], tr.target, tr.gate)
-                else:
-                    mc_transform(self.state, cs, tr.target, tr.gate)
+            self.apply_transformation(tr)
         self.transformations = []
         return self.state
+
+    def run_and_yield(self):
+        yield None, self.state
+        for tr in self.transformations:
+            self.apply_transformation(tr)
+            yield tr, self.state
+        self.transformations = []
+
+    def apply_transformation(self, tr):
+        if tr.name == 'unitary':
+            cs = tr.controls
+            if len(cs) == 0:
+                transform_u(self.state, tr.gate, tr.target)
+            elif len(cs) == 1:
+                c_transform_u(self.state, tr.gate, cs[0], tr.target)
+
+        elif isinstance(tr, Swap):
+            c_transform(self.state, tr.i, tr.j, x)
+            c_transform(self.state, tr.j, tr.i, x)
+            c_transform(self.state, tr.i, tr.j, x)
+
+        else:
+            cs = tr.controls
+            if len(cs) == 0:
+                transform(self.state, tr.target, tr.gate)
+            elif len(cs) == 1:
+                c_transform(self.state, cs[0], tr.target, tr.gate)
+            else:
+                mc_transform(self.state, cs, tr.target, tr.gate)
 
     def swap(self, i, j):
         self.transformations.append(Swap(i, j))
