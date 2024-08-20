@@ -254,7 +254,7 @@ def amplitude_estimation_circuit(n, prepare, oracle, swap=True):
     qc = QuantumCircuit(c, q)
 
     qc.append(prepare, q)
-    qc.report('A')
+    # qc.report('A')
 
     for i in range(n):
         qc.h(c[i])
@@ -266,8 +266,8 @@ def amplitude_estimation_circuit(n, prepare, oracle, swap=True):
             else:
                 qc.c_append(grover_iterate_circuit(prepare, oracle), c[n - 1 - i], q)
 
-    # qc.iqft(c if swap else c[::-1], swap)
-    qc.append_iqft(c, not swap, swap)
+    qc.iqft(c if swap else c[::-1], swap)
+    # qc.append_iqft(c, not swap, swap)
 
     return qc
 
@@ -278,7 +278,7 @@ def simple_amplitude_estimation_circuit(prepare, oracle, iterations):
     qc = QuantumCircuit(c, q)
 
     qc.append(prepare, q)
-    qc.report('A')
+    # qc.report('A')
 
     qc.h(c[0])
 
