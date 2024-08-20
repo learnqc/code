@@ -1,7 +1,9 @@
 from ch08.util import *
+from sim_circuit import *
 from math import log2
 import matplotlib.pyplot as plt
 from sty import fg
+import scipy.stats
 
 
 def padded_bin(n, k):
@@ -53,3 +55,21 @@ def plot_bars(bars, title, title_x, title_y, color=None, fig_name=None, action=l
 
 def dagger(U):
     return U.T.conj()
+
+
+def unitary_to_circuit(U):
+    assert(U.shape[0] == U.shape[1])
+    m = int(log2(U.shape[0]))
+
+    q = QuantumRegister(m)
+    qc = QuantumCircuit(q)
+    qc.append_u(U, q)
+
+    return qc
+
+def random_unitary_and_circuit(m):
+    A = scipy.stats.unitary_group.rvs(2**m)
+    return A, unitary_to_circuit(A)
+
+def random_circuit(m):
+    return random_unitary_and_circuit(m)[1]
