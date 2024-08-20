@@ -1,23 +1,15 @@
 from math import log2
 
-from qiskit import QuantumRegister, QuantumCircuit, transpile
-from qiskit.quantum_info import Statevector
+import qiskit
 
 from hume.simulator.circuit import Swap
 from hume.utils.common import print_state_table, all_close
 from hume.utils.matrix import as_array
 
 
-def run(self):
-    return Statevector(self)
-
-
-setattr(QuantumCircuit, 'run', run)
-
-
 def hume_to_qiskit(regs, transformations):
-    qs = [QuantumRegister(size, 'q' if len(regs) == 1 else None) for size in regs]
-    qc = QuantumCircuit(*qs)
+    qs = [qiskit.QuantumRegister(size, 'q' if len(regs) == 1 else None) for size in regs]
+    qc = qiskit.QuantumCircuit(*qs)
 
     for tr in transformations:
         if isinstance(tr, Swap):

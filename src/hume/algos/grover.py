@@ -1,6 +1,6 @@
 from math import log2, sin, asin, sqrt, pi, cos
 
-from hume.simulator.circuit import QuantumRegister, QuantumCircuit
+from hume import QuantumRegister, QuantumCircuit
 from hume.simulator.core import transform, init_state
 from hume.simulator.gates import h, ry
 from hume.utils.common import inner, is_close, padded_bin
@@ -163,7 +163,7 @@ def target_amplitude_binomial(n, it, k, phi):
 
 
 def grover_circuit(A, O, iterations):
-    n = sum(A.regs)
+    n = A.num_qubits
     q = QuantumRegister(n)
     qc = QuantumCircuit(q)
 
@@ -197,7 +197,7 @@ def phase_oracle_match(n, items):
 
 
 def inversion_circuit(prepare):
-    n = sum(prepare.regs)
+    n = prepare.num_qubits
     q = QuantumRegister(n)
     qc = QuantumCircuit(q)
 
@@ -235,7 +235,7 @@ def inversion_0_circuit(n):
 
 
 def grover_iterate_circuit(prepare, oracle):
-    n = sum(oracle.regs)
+    n = oracle.num_qubits
     q = QuantumRegister(n)
     qc = QuantumCircuit(q)
 
@@ -250,7 +250,7 @@ def grover_iterate_circuit(prepare, oracle):
 
 def amplitude_estimation_circuit(n, prepare, oracle, swap=True):
     c = QuantumRegister(n)
-    q = QuantumRegister(sum(prepare.regs))
+    q = QuantumRegister(prepare.num_qubits)
     qc = QuantumCircuit(c, q)
 
     qc.append(prepare, q)
@@ -274,7 +274,7 @@ def amplitude_estimation_circuit(n, prepare, oracle, swap=True):
 
 def simple_amplitude_estimation_circuit(prepare, oracle, iterations):
     c = QuantumRegister(1)
-    q = QuantumRegister(sum(prepare.regs))
+    q = QuantumRegister(prepare.num_qubits)
     qc = QuantumCircuit(c, q)
 
     qc.append(prepare, q)

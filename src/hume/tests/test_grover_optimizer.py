@@ -1,4 +1,5 @@
-from hume.algos.grover_optimizer import poly, oracle_match_0, build_polynomial_circuit, grover_optimizer
+from hume.algos.grover_optimizer import oracle_match_0, grover_optimizer
+from hume.algos.function_encoding import build_polynomial_circuit, poly
 from hume.utils.common import padded_bin
 
 

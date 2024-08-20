@@ -60,8 +60,7 @@ def complex_to_rgb(c, ints=False):
     rgb = scalarMap.to_rgba(hue)[:3]
 
     if ints:
-        r, g, b = tuple([int(round(c * 255.0)) for c in rgb])
-        return (r, g, b)
+        return [int(round(c * 255.0)) for c in rgb]
     else:
         return rgb
 

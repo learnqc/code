@@ -1,5 +1,6 @@
 from math import asin, sqrt, pi, sin
 
+import hume.qiskit
 from hume.algos.grover import grover_sim, grover_sim_unitary, oracle, inversion, \
     inversion_0_transformation, amplitude_estimation_circuit, phase_oracle_match, prepare_uniform
 from hume.simulator.core import init_state

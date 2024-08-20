@@ -66,6 +66,7 @@ class QuantumCircuit:
         self.state = init_state(bits)
         self.transformations = []
         self.regs = regs
+        self.num_qubits = sum(self.regs)
         self.reports = {}
 
     def initialize(self, state):

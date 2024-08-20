@@ -1,0 +1,2 @@
+SIMULATOR = 'hume'
+# SIMULATOR = 'qiskit'
