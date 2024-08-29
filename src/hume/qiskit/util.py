@@ -1,3 +1,4 @@
+from collections import Counter
 from math import log2
 
 import qiskit

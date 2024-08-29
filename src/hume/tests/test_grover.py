@@ -1,6 +1,7 @@
 from math import asin, sqrt, pi, sin
 
 import hume.qiskit
+from build.lib.hume.utils.common import print_state_table
 from hume.algos.grover import grover_sim, grover_sim_unitary, oracle, inversion, \
     inversion_0_transformation, amplitude_estimation_circuit, phase_oracle_match, prepare_uniform
 from hume.simulator.core import init_state
@@ -63,6 +64,8 @@ def test_amplitude_estimation():
         qc = amplitude_estimation_circuit(n, prepare_uniform(m), phase_oracle_match(m, items), False)
         state = qc.run()
 
+        # print_state_table(state)
+
         probs = [0 for _ in range(2 ** n)]
 
         for j in range(2 ** n):  # suffix
@@ -70,11 +73,11 @@ def test_amplitude_estimation():
                 probs[j] += abs(state[k * 2 ** n + j]) ** 2
 
         # from count to v
-        theta = 2 * asin(sqrt(len(items) / 2 ** m))
-        v = theta / 2 / pi * 2 ** n
+        # theta = 2 * asin(sqrt(len(items) / 2 ** m))
+        # v = theta / 2 / pi * 2 ** n
         v = 2 ** n / pi * asin(sqrt(len(items) / 2 ** m))
 
-        sincd = [abs(a) ** 2 for a in complex_sincd(n - 1, v)]
+        # sincd = [abs(a) ** 2 for a in complex_sincd(n - 1, v)]
 
         for k in range(1, len(probs) // 2):
             assert is_close(abs(probs[k]) ** 2, abs(probs[len(probs) - k]) ** 2)

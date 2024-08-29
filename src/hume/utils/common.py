@@ -1,4 +1,5 @@
-from math import cos, sin, pi, log2, log10, atan2, floor
+import random
+from math import cos, sin, pi, log2, log10, atan2, floor, sqrt
 from sty import fg
 
 from hume.utils.scalar_map import plt, plt, scalarMap
@@ -174,3 +175,16 @@ def list_to_dict(state, show_binary=True):
     n = int(log2(len(state)))
     return dict(zip([str(k) + (('=' + padded_bin(n, k)) if show_binary else '') for k in range(len(state))],
                     [state[k] for k in range(len(state))]))
+
+
+def generate_state(n, seed=555):
+    # Choose a seed
+    random.seed(seed)
+    # Generate random probabilities that add up to 1
+    probs = [random.random() for _ in range(2**n)]
+    total = sum(probs)
+    probs = [p / total for p in probs]
+    # Generate random angles in radians
+    angles = [random.uniform(0, 2 * pi) for _ in range(2**n)]
+    # Build the quantum state array
+    return [sqrt(p) * (cos(a) + 1j * sin(a)) for (p, a) in zip(probs, angles)]
