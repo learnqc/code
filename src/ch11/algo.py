@@ -57,3 +57,12 @@ def oracle_match_0_multi(bits, tag_bits):
         qc.x(q[t])
 
     return qc
+
+
+def oracle_match_1(bits, tag_bit):
+    q = QuantumRegister(bits)
+    qc = QuantumCircuit(q)
+
+    qc.p(pi, tag_bit)
+
+    return qc
