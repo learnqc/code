@@ -22,7 +22,7 @@ def init_state(n):
 
 
 def is_bit_set(m, k):
-    return m & (1 << k)
+    return m & (1 << k) != 0
 
 
 def pair_generator_check_digit(n, t):
